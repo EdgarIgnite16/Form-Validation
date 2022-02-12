@@ -11,7 +11,7 @@
 
 <body>
     <div class="main">
-        <form action="" method="POST" class="form" id="form-1">
+        <form action="" method="POST" class="form" id="form-register">
             <h3 class="heading">Register</h3>
             <p class="desc">Edgar's Tool - Phần mềm vạn năng ⚒️</p>
 
@@ -19,58 +19,22 @@
 
             <div class="form-group">
                 <label for="email" class="form-label">Email</label>
-                <input id="email" name="email" type="text" placeholder="VD: email@domain.com" class="form-control">
+                <input id="email" name="email" rules="required|email"
+                    type="text" placeholder="VD: email@domain.com" class="form-control">
                 <span class="form-message"></span>
             </div>
-
-            <div class="form-group">
-                <label for="province" class="form-label">Tỉnh/Thành Phố</label>
-                <select id="province" name="province" type="password" class="form-control">
-                    <option value="">-- Chọn Tỉnh/Thành Phố</option>
-                    <option value="hni">Hà Nội</option>
-                    <option value="hpg">Hải Phòng</option>
-                    <option value="hcm">Thành phố Hồ Chí Minh</option>
-                </select>
-                <span class="form-message"></span>
-            </div>
-
+            
             <div class="form-group">
                 <label for="fullname" class="form-label">Tên tài khoản</label>
-                <input id="fullname" name="fullname" type="text" placeholder="VD: Edgar Ignite" class="form-control">
+                <input id="fullname" name="fullname" rules="required|max:20"
+                    type="text" placeholder="VD: Edgar Ignite" class="form-control">
                 <span class="form-message"></span>
             </div>
 
             <div class="form-group">
                 <label for="password" class="form-label">Mật khẩu</label>
-                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
-                <input id="password_confirmation" name="password_confirmation" placeholder="Nhập lại mật khẩu"
-                    type="password" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <label for="avatar" class="form-label">Ảnh đại diện</label>
-                <input id="avatar" name="avatar"type="file" class="form-control">
-                <span class="form-message"></span>
-            </div>
-
-            <div class="form-group">
-                <div class="horizontal">
-                    <label for="gender" class="form-label">Giới tính</label>
-                    <div>
-                        <input name="gender" value="male" type="radio" class="form-control" checked>
-                        <p>Nam</p>
-                    </div>
-                    <div>
-                        <input name="gender" value="female" type="radio" class="form-control">
-                        <p>Nữ</p>
-                    </div>
-                </div>
+                <input id="password" name="password" rules="required|min:6" 
+                    type="password" placeholder="Nhập mật khẩu" class="form-control">
                 <span class="form-message"></span>
             </div>
 
@@ -79,7 +43,8 @@
     </div>
 
     <!-- script running  -->
-    <script src="./validate.js"></script>
+    <script src="./lib/validate.js"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
