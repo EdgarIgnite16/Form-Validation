@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation 1</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="main">
+        <form action="" method="POST" class="form" id="form-register">
+            <h3 class="heading">Register</h3>
+            <p class="desc">Edgar's Tool - Phần mềm vạn năng ⚒️</p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" rules="required|email"
+                    type="text" placeholder="VD: email@domain.com" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="fullname" class="form-label">Tên tài khoản</label>
+                <input id="fullname" name="fullname" rules="required|max:20"
+                    type="text" placeholder="VD: Edgar Ignite" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" rules="required|min:6" 
+                    type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message"></span>
+            </div>
+
+            <button class="form-submit">Đăng ký</button>
+        </form>
+    </div>
+
+    <!-- script running  -->
+    <script src="./lib/validate.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
